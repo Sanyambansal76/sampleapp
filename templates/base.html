@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+  <head>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="{% static 'js/validator.js' %}"></script>
+
+        <script src="{% static 'js/bootstrap3-typeahead.min.js' %}"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+        <link rel="stylesheel" href="{% static 'chat.css' %}">
+        <!-- <link rel="stylesheel" href="{% static 'javascript/chat.js' %}"> -->
+
+        <!-- <script src="{% static 'javascript/websocket.min.js' %}"></script> -->
+        <script src="{% static 'js/validator.js' %}"></script>
+        <script src="{% static 'js/bootstrap3-typeahead.min.js' %}"></script>
+        <script src="{% static 'javascript/bloodhound.min.js' %}"></script>
+
+    </head>
+</html>
+
+<body>
+
+    {% block content %}
+
+    {% endblock %}
+
+    {% block styles %}
+
+    {% endblock %}
+
+</body>
+
+</html>

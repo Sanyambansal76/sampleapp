@@ -3,11 +3,6 @@ __pycache__/
 *.py[cod]
 *$py.class
 
-# Django
-db.sqlite*
-/media
-
-
 # C extensions
 *.so
 
