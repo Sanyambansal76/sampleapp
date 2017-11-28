@@ -1,0 +1,29 @@
+<VirtualHost *:80>
+    ServerAdmin sanyambansal76@gmail.com
+    Alias /static/ /home/ubuntu/sampleapp/sampleapp/staticfiles/
+    Alias /media/ /home/ubuntu/sampleapp/sampleapp/media/
+
+    WSGIScriptAlias / /home/ubuntu/sampleapp/sampleapp/sampleapp/wsgi.py
+    WSGIDaemonProcess sampleapp.com.80 user=ubuntu group=ubuntu processes=2 threads=10 maximum-requests=500 display-name=sampleapp80 python-path=/home/ubuntu/sampleapp/sampleapp:/home/ubuntu/sampleapp/venv/lib/python2.7/site-packages
+    WSGIProcessGroup sampleapp.com.80
+
+    WSGIPassAuthorization On
+
+    <Directory /home/ubuntu/sampleapp/sampleapp>
+        Options All
+        AllowOverride All
+        Require all granted
+    </Directory>
+
+    Alias /static /home/ubuntu/sampleapp/sampleapp/staticfiles
+    <Directory /home/ubuntu/sampleapp/sampleapp/staticfiles>
+        Require all granted
+    </Directory>
+
+    Alias /media /home/ubuntu/sampleapp/sampleapp/media
+    <Directory /home/ubuntu/sampleapp/sampleapp/media>
+        Options All
+        AllowOverride All
+        Require all granted
+    </Directory>
+</VirtualHost>

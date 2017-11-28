@@ -1,0 +1,21 @@
+
+# Add Env Variables In Apache Env -- sudo vim /etc/apache2/envvars/
+# Add Your Db Settings
+
+export DBNAME="sampleapp"
+export DBUSER="sampleappuser"
+export DBPASSWORD="sampleapppassowrd"
+export DBHOST="sampleapp.rjgnjergkn.us-east-1.rds.amazonaws.com"
+export DBPORT=5432
+export ENVIRONMENT="prod"
+
+
+# Add Env Variables In System Env -- sudo vim /etc/environment/s
+# Add Your DB settings
+
+DBNAME="sampleapp"
+DBUSER="sampleappuser"
+DBPASSWORD="sampleapppassowrd"
+DBHOST="sampleapp.fekrjberjbg.us-east-1.rds.amazonaws.com"
+DBPORT=5432
+ENVIRONMENT="prod"
